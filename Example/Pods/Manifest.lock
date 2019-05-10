@@ -1,0 +1,16 @@
+PODS:
+  - HLSDownloader (0.1.0)
+
+DEPENDENCIES:
+  - HLSDownloader (from `../`)
+
+EXTERNAL SOURCES:
+  HLSDownloader:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HLSDownloader: 56be33bebe08937ef95e9f7e64ca4a0ea9241b77
+
+PODFILE CHECKSUM: 0f02039ad40f7e2bc28d4e7932baf5e0fe36e746
+
+COCOAPODS: 1.5.3

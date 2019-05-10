@@ -1,0 +1,6 @@
+framework module HLSDownloader {
+  umbrella header "HLSDownloader-umbrella.h"
+
+  export *
+  module * { export * }
+}

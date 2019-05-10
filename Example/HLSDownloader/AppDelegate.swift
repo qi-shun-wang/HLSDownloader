@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import HLSDownloader
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    lazy var manager: HLSManager = {
+        return DownloadHLSManager()
+    }()
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        application.setMinimumBackgroundFetchInterval(2)
         // Override point for customization after application launch.
         return true
     }
@@ -40,7 +44,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
+protocol HLSAccessible {}
+
+extension HLSAccessible {
+    var manager: HLSManager {
+        get {
+            return ((UIApplication.shared.delegate!) as! AppDelegate).manager
+        }
+    }
+}
