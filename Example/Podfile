@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HLSDownloader_Example' do
+  pod 'HLSDownloader', :path => '../'
+
+  target 'HLSDownloader_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
