@@ -22,7 +22,7 @@ pod 'HLSDownloader'
 
 ## Author
 
-qi-shun-wang, qi.shun.wang@icloud.com
+[Shun Wang](qi.shun.wang@icloud.com)
 
 ## License
 

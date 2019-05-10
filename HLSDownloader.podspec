@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/qi-shun-wang/HLSDownloader'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'qi-shun-wang' => 'qi.shun.wang@icloud.com' }
+  s.author           = { 'Shun Wang' => 'qi.shun.wang@icloud.com' }
   s.source           = { :git => 'https://github.com/qi-shun-wang/HLSDownloader.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
