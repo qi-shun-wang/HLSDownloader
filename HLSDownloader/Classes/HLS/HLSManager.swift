@@ -1,5 +1,5 @@
 import AVKit
-import UIKit
+
 public protocol ProgressDelegate {
     func progress(hls: HLS, percentage: Float)
     func keyWillDownload(hls: HLS)
