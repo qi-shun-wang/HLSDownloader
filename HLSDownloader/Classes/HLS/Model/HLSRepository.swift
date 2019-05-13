@@ -8,7 +8,7 @@ public protocol HLSRepository {
     func find(taskID: Int) throws -> HLS?
     func find(movpkgPath: String) throws -> HLS?
     func find(url: String) throws -> HLS?
-    
+    func delete(hls: HLS) throws
 }
 
 public class LocalHLSRepository {
@@ -76,6 +76,20 @@ extension LocalHLSRepository: HLSRepository {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .formatted(dateFormatter)
             return try decoder.decode(HLSCache.self, from: content)
+        }
+    }
+    
+    public func delete(hls: HLS) throws {
+        guard let movpkgPath = hls.movpkgLocalFileUrl else {throw HLSError.invalidOperation}
+        try FileManager.default.removeItem(at: movpkgPath)
+        var cache = try queryHLSCache()
+        if let index = cache.caches.lastIndex(where: { ($0.uuid == hls.uuid) }) {
+            cache.caches.remove(at: index)
+            let encoder = JSONEncoder()
+            encoder.dateEncodingStrategy = .formatted(dateFormatter)
+            let new = try encoder.encode(cache)
+            let url = URL(fileURLWithPath: filePath)
+            try new.write(to: url)
         }
     }
     

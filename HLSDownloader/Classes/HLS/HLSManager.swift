@@ -16,6 +16,7 @@ public protocol HLSManager: AVAssetDownloadDelegate {
     
     func download(_ hls: HLS) throws
     func suspend(_ hls: HLS) throws
+    func remove(_ hls: HLS) throws
     
     func getLocalAsset(_ hls: HLS) -> AVPlayerItem?
     
@@ -67,6 +68,29 @@ public class DownloadHLSManager: NSObject, HLSManager {
                 }
             }
             
+        }
+    }
+    
+    public func remove(_ hls: HLS) throws {
+        print("[Remove HLS]\(hls.url)")
+        guard let state = HLS.State(rawValue: hls.state) else {throw HLSError.invalidState}
+        switch state {
+        case .downloaded:
+            try repository.delete(hls: hls)
+        default:
+            downloadSession.getAllTasks { (tasks) in
+                for task in tasks {
+                    let taskAssetUrl = (task as! AVAssetDownloadTask).urlAsset.url.absoluteString
+                    if taskAssetUrl == hls.url
+                    {
+                        print("[Cancel Task]\(taskAssetUrl)")
+                        task.cancel()
+                    } else {
+                        print("[Searching Next]\(taskAssetUrl)")
+                    }
+                    
+                }
+            }
         }
     }
     

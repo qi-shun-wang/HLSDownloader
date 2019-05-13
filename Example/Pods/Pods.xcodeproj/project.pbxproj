@@ -7,288 +7,324 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0186A4B07F2E492967F3C64D53423147 /* HLSDownloader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3629E2F47315DFE2F1CA135248C11DE /* HLSDownloader-dummy.m */; };
-		18D5A6E6260DAAF6FB82E89BC33565F5 /* HLSDownloader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51695D675924D8A323ACB7098DA03789 /* HLSDownloader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27C9CC4065D13D771A9853033F3882AD /* Pods-HLSDownloader_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7264CAB4A863E70C443C66B9EF4643 /* Pods-HLSDownloader_Tests-dummy.m */; };
-		2DCDA76C369549802409B4AEEF3E196F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		4BF466F4299B4110DA0821A7D473A476 /* Pods-HLSDownloader_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4632031195366B2397653F25EF7C1AA /* Pods-HLSDownloader_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		53BCA8A9A9DC491C543FC76AA34A422D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		7BA51015B9506BF10AC1597E12776F80 /* HLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEADB3E28911C0EAFA1689373422852 /* HLS.swift */; };
-		9D48373B8A0B7EA0B22F90F5EEC9613F /* HLSLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F00141CC0C96CEB9825BD04728FEF91 /* HLSLoader.swift */; };
-		A2FBAAB3EC42A070E13DCFEA6D9109CF /* HLSRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6FDA48393C5AB7ACFEB2621F3C75E8 /* HLSRepository.swift */; };
-		B0B7EA849994793A04FE92A1C9E24BFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		B195452E5B29C7A8C088FFE7FAA663C7 /* HLSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1AE0D59B9C65655DF95AF517565C91 /* HLSManager.swift */; };
-		B43BD8DA2531C727B786D9CB2AC176B4 /* Pods-HLSDownloader_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6C514EB35A17DFB6DB7FC2673D08C /* Pods-HLSDownloader_Example-dummy.m */; };
-		B488B6B5509AA1DA7C0E74E5BFCF8362 /* KeyLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693306BADF82868763BAE6A6C3768528 /* KeyLoader.swift */; };
-		E596C1EA28505D786B29D6F5696E7A8C /* HLSCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453CA040AED05E9BC112491247517DF /* HLSCache.swift */; };
-		FA15819B6181899FBD4B4483548C58F7 /* Pods-HLSDownloader_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E673EFAAE80CE3133AF72D9C24E3A47 /* Pods-HLSDownloader_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		011014280375F27B273EAD9C5481325A /* Pods-HLSDownloader_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C5AEC2138DFC84020FB5A91B1CF86 /* Pods-HLSDownloader_Example-dummy.m */; };
+		0BC1D8DF3F707D943B0DB3F76486BD26 /* HLSLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D6A8513A593B712F2677DC8A614B75 /* HLSLoader.swift */; };
+		0FA20ECF66A8ABCEDBE7934F19D68B11 /* HLSCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4215895E620D4B182011A925548FBD3 /* HLSCache.swift */; };
+		1767A7E916E5C2432EF9A2194949099C /* KeyLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB29EEE208B890C739CF6D0F29CD094 /* KeyLoader.swift */; };
+		337239B03EAE7FB64AFA8BA003032912 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BC8723D88D4DB13F66A4C0F3DB1E72 /* AVKit.framework */; };
+		379D5A0AD97D149033F14B2A2C5D53A0 /* HLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AD28A4701B4BAF7C319BCDF9EA0CD /* HLS.swift */; };
+		44400D37B6374F7DC085F627B956B535 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0586A937C1BF2B1062D13582BF6C2536 /* Foundation.framework */; };
+		54AC8A254C75A15E8B34726DB39A226F /* Pods-HLSDownloader_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D95379746D0A6ACBC1EF327BC6BD39B /* Pods-HLSDownloader_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		621608E1F32C174B02A69BE92D84738E /* HLSDownloader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37802D9245E5391D93ECEC1A70791A81 /* HLSDownloader-dummy.m */; };
+		81134AE3A26D7D08626734C94FA4711A /* HLSRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5B9B0BF2786C8C45CAB6A0E3343547 /* HLSRepository.swift */; };
+		83EB1B4B3FAEEBD02CDA42E66989C707 /* Pods-HLSDownloader_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A9586E7B3D0559F58BDFC18CB53C1469 /* Pods-HLSDownloader_Tests-dummy.m */; };
+		93AC07B4A6E8645B839E8DD33FF2AFF0 /* HLSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F9DF44E13CD4060AADE451B8593D7 /* HLSManager.swift */; };
+		AC2300513348BA799C252722C0CA1381 /* Pods-HLSDownloader_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4234B64CBE3FFA4A627BA092422371DA /* Pods-HLSDownloader_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3A83A78E6ADFFA04B529321388AA46B /* HLSDownloader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53BF28488C22BEA9D5235952BE549BA5 /* HLSDownloader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA91972C5BD51C595F3C33F64D5A1D6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0586A937C1BF2B1062D13582BF6C2536 /* Foundation.framework */; };
+		FD9BFF9E6370FBE1164985C3A0C7B26F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0586A937C1BF2B1062D13582BF6C2536 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A0F605986CBF73F933BD241BE4B0313B /* PBXContainerItemProxy */ = {
+		B6B97DB1F20EDD62AB38D3439B121559 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7B2C6CAA72EE3250C5BD84444B746BBE;
+			remoteGlobalIDString = 3CC4D58B1B60937B1F3CC761BF5757B7;
 			remoteInfo = "Pods-HLSDownloader_Example";
 		};
-		D40698C1E7DF6CD6B044DF30767659BB /* PBXContainerItemProxy */ = {
+		FE6DDB9FCA9283E601C653138ABB417B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6B93CE82DC12E342BE2088CAF27DCBA3;
+			remoteGlobalIDString = B8BF75264706EF57C72CCB815F2D5B83;
 			remoteInfo = HLSDownloader;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03E493A17A60516C53151648C59EA137 /* Pods-HLSDownloader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HLSDownloader_Example.release.xcconfig"; sourceTree = "<group>"; };
-		057DC158BB7ADEE8CBDE2A03438B144C /* Pods-HLSDownloader_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HLSDownloader_Example-resources.sh"; sourceTree = "<group>"; };
-		07812ADF34087942DA8F57A732392E37 /* HLSDownloader.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HLSDownloader.xcconfig; sourceTree = "<group>"; };
-		07B7CB41D83BA5570893BDC2809AD317 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E2F05DCF8573187063FCA61F16BCC8A /* HLSDownloader.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = HLSDownloader.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		190D9B9F0092FBBAF0F7A57F36400BD0 /* Pods-HLSDownloader_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HLSDownloader_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		1CEADB3E28911C0EAFA1689373422852 /* HLS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HLS.swift; sourceTree = "<group>"; };
-		2CA7174D986A250E5838B9D030B85179 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35E7A1BF7CFA7262D270C4F7C3A3CAD1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		37A6C514EB35A17DFB6DB7FC2673D08C /* Pods-HLSDownloader_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HLSDownloader_Example-dummy.m"; sourceTree = "<group>"; };
-		39BEE1148C171403FD6F88F1583533BA /* Pods-HLSDownloader_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HLSDownloader_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		39E2A509F22AD46A6CE35E8E86A5CE52 /* HLSDownloader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HLSDownloader-prefix.pch"; sourceTree = "<group>"; };
-		3F00141CC0C96CEB9825BD04728FEF91 /* HLSLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HLSLoader.swift; path = HLSDownloader/Classes/HLS/HLSLoader.swift; sourceTree = "<group>"; };
-		417C4B0D8F3C574BBAE12EB06920016E /* Pods-HLSDownloader_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HLSDownloader_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		4E673EFAAE80CE3133AF72D9C24E3A47 /* Pods-HLSDownloader_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HLSDownloader_Example-umbrella.h"; sourceTree = "<group>"; };
-		51695D675924D8A323ACB7098DA03789 /* HLSDownloader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HLSDownloader-umbrella.h"; sourceTree = "<group>"; };
-		693306BADF82868763BAE6A6C3768528 /* KeyLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyLoader.swift; path = HLSDownloader/Classes/HLS/KeyLoader.swift; sourceTree = "<group>"; };
-		7624FA63ABEFD5E6E720B9F8F38ECA67 /* Pods-HLSDownloader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HLSDownloader_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		8A6FDA48393C5AB7ACFEB2621F3C75E8 /* HLSRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HLSRepository.swift; sourceTree = "<group>"; };
-		8EC1403417C2BD9E3BAD30F1090C8F3B /* Pods-HLSDownloader_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HLSDownloader_Tests.modulemap"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		943CCED753F804B9218088EAC3ACC743 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9D7264CAB4A863E70C443C66B9EF4643 /* Pods-HLSDownloader_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HLSDownloader_Tests-dummy.m"; sourceTree = "<group>"; };
-		9E1AE0D59B9C65655DF95AF517565C91 /* HLSManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HLSManager.swift; path = HLSDownloader/Classes/HLS/HLSManager.swift; sourceTree = "<group>"; };
-		9E56ABBB1E1F6D13062420E561EE274D /* Pods-HLSDownloader_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HLSDownloader_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		B3629E2F47315DFE2F1CA135248C11DE /* HLSDownloader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HLSDownloader-dummy.m"; sourceTree = "<group>"; };
-		B9E650B877FE9478BF0B4735F5631903 /* Pods-HLSDownloader_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HLSDownloader_Example.modulemap"; sourceTree = "<group>"; };
-		C453CA040AED05E9BC112491247517DF /* HLSCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HLSCache.swift; sourceTree = "<group>"; };
-		C8641FC83372DC2540A402E6FBBFC240 /* Pods-HLSDownloader_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HLSDownloader_Tests-resources.sh"; sourceTree = "<group>"; };
-		D0B7BAB03F7CB733E623E35C663DCB7D /* Pods-HLSDownloader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HLSDownloader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D0C257036FF3C07DF50430C296A432C0 /* Pods_HLSDownloader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HLSDownloader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1528C3B8268450FAFE1947FBD8DC42A /* HLSDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HLSDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4632031195366B2397653F25EF7C1AA /* Pods-HLSDownloader_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HLSDownloader_Tests-umbrella.h"; sourceTree = "<group>"; };
-		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		E315DA72D6A32F03C8F40511F5142D1D /* Pods-HLSDownloader_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HLSDownloader_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E3C7445880A88D785AE4F8F3350AF924 /* HLSDownloader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HLSDownloader.modulemap; sourceTree = "<group>"; };
-		E5E80EDEB521788E81A512D7CB2D15AC /* Pods_HLSDownloader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HLSDownloader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E68C544BD2344D629C67687C1604DF89 /* Pods-HLSDownloader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HLSDownloader_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		EF210CA917F815D745FEF5133292B816 /* Pods-HLSDownloader_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HLSDownloader_Example-frameworks.sh"; sourceTree = "<group>"; };
-		FB5BFEDB9ED7816DA02BADF05B3FCB0A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0586A937C1BF2B1062D13582BF6C2536 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		083571FE6973D8B8B6AC620867CA5F54 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		1430EC8550D01499DC3EFEA9027C50E6 /* Pods-HLSDownloader_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HLSDownloader_Example.modulemap"; sourceTree = "<group>"; };
+		1A5B9B0BF2786C8C45CAB6A0E3343547 /* HLSRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HLSRepository.swift; sourceTree = "<group>"; };
+		1CB29EEE208B890C739CF6D0F29CD094 /* KeyLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyLoader.swift; path = HLSDownloader/Classes/HLS/KeyLoader.swift; sourceTree = "<group>"; };
+		25BC8723D88D4DB13F66A4C0F3DB1E72 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/AVKit.framework; sourceTree = DEVELOPER_DIR; };
+		2E7C5AEC2138DFC84020FB5A91B1CF86 /* Pods-HLSDownloader_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HLSDownloader_Example-dummy.m"; sourceTree = "<group>"; };
+		354F13C452312C438B030EF630503BE6 /* HLSDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HLSDownloader.framework; path = HLSDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37802D9245E5391D93ECEC1A70791A81 /* HLSDownloader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HLSDownloader-dummy.m"; sourceTree = "<group>"; };
+		3B7F9DF44E13CD4060AADE451B8593D7 /* HLSManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HLSManager.swift; path = HLSDownloader/Classes/HLS/HLSManager.swift; sourceTree = "<group>"; };
+		3D95379746D0A6ACBC1EF327BC6BD39B /* Pods-HLSDownloader_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HLSDownloader_Tests-umbrella.h"; sourceTree = "<group>"; };
+		4234B64CBE3FFA4A627BA092422371DA /* Pods-HLSDownloader_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HLSDownloader_Example-umbrella.h"; sourceTree = "<group>"; };
+		53BF28488C22BEA9D5235952BE549BA5 /* HLSDownloader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HLSDownloader-umbrella.h"; sourceTree = "<group>"; };
+		643EFB074765FAE09FF5E74DFE6C8F95 /* Pods-HLSDownloader_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HLSDownloader_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		73FCF334674F20C515DEABB27B967788 /* HLSDownloader-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HLSDownloader-Info.plist"; sourceTree = "<group>"; };
+		79536B1446FF5A560B5794A6D52C5D0A /* Pods-HLSDownloader_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HLSDownloader_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7AE840C32A58BBBF7FD87E5B61B39462 /* Pods-HLSDownloader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HLSDownloader_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		7DA878F28B98A79E1FD7FC336C3822F6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		86AF50CC28545F006DDDD2CD27CD0D48 /* Pods_HLSDownloader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HLSDownloader_Example.framework; path = "Pods-HLSDownloader_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EFF47043542539C55BCFC02F475B918 /* Pods-HLSDownloader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HLSDownloader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B83F61F74567B6A09D4F1D4C5AC3B52 /* HLSDownloader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HLSDownloader.modulemap; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E14E3284FBCC9518BE9587C7ED5B4BD /* Pods-HLSDownloader_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HLSDownloader_Example-frameworks.sh"; sourceTree = "<group>"; };
+		A0F6BA9D6EE39C6A1C79B27097ADC446 /* HLSDownloader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HLSDownloader-prefix.pch"; sourceTree = "<group>"; };
+		A87AC035B6AD49FA7F2235BE1928A7ED /* Pods-HLSDownloader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HLSDownloader_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A91CC3B37F9920D01D5A324D081D22F5 /* Pods-HLSDownloader_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HLSDownloader_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A9586E7B3D0559F58BDFC18CB53C1469 /* Pods-HLSDownloader_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HLSDownloader_Tests-dummy.m"; sourceTree = "<group>"; };
+		ABC22CA97C209DFFB4EE9F996587B95B /* Pods-HLSDownloader_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HLSDownloader_Example-Info.plist"; sourceTree = "<group>"; };
+		ACA202447017707925FF6063CEB6E931 /* HLSDownloader.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HLSDownloader.xcconfig; sourceTree = "<group>"; };
+		B07AD28A4701B4BAF7C319BCDF9EA0CD /* HLS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HLS.swift; sourceTree = "<group>"; };
+		B596DCC74BA8928001C391832D79FC43 /* Pods_HLSDownloader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HLSDownloader_Tests.framework; path = "Pods-HLSDownloader_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA98E40F46BFC6906857FF9DC33E1F68 /* Pods-HLSDownloader_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HLSDownloader_Tests-Info.plist"; sourceTree = "<group>"; };
+		C421B48D1534838506E6715A6CDD13DE /* Pods-HLSDownloader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HLSDownloader_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		CBDB1BFBA898DA332F73AC189306EC69 /* Pods-HLSDownloader_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HLSDownloader_Tests.modulemap"; sourceTree = "<group>"; };
+		E5D6A8513A593B712F2677DC8A614B75 /* HLSLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HLSLoader.swift; path = HLSDownloader/Classes/HLS/HLSLoader.swift; sourceTree = "<group>"; };
+		E72E52CCA391054BAC303D3CD31D4BD0 /* HLSDownloader.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HLSDownloader.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F4215895E620D4B182011A925548FBD3 /* HLSCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HLSCache.swift; sourceTree = "<group>"; };
+		FEBB358FC8D5C24628D7B7F2F1A71B09 /* Pods-HLSDownloader_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HLSDownloader_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		191C76CDC3D83A37EC3778303AE887FE /* Frameworks */ = {
+		1D17EF1210F8F5CAB035A3B034DF4CBF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCDA76C369549802409B4AEEF3E196F /* Foundation.framework in Frameworks */,
+				DA91972C5BD51C595F3C33F64D5A1D6D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D6674F2631982EB8FEB1FDB835A6A40 /* Frameworks */ = {
+		216D3F1B36D206EB34F70D8EFB59F273 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0B7EA849994793A04FE92A1C9E24BFE /* Foundation.framework in Frameworks */,
+				FD9BFF9E6370FBE1164985C3A0C7B26F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C37AF059618CB2D413BD5450992E59E8 /* Frameworks */ = {
+		AB6537ACE294E2E130E30AE3D9358705 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53BCA8A9A9DC491C543FC76AA34A422D /* Foundation.framework in Frameworks */,
+				337239B03EAE7FB64AFA8BA003032912 /* AVKit.framework in Frameworks */,
+				44400D37B6374F7DC085F627B956B535 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E19378B8FB6807AC4AEF46C355740EB /* Support Files */ = {
+		10072644FC84E92BBDB37BC46941FB75 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E3C7445880A88D785AE4F8F3350AF924 /* HLSDownloader.modulemap */,
-				07812ADF34087942DA8F57A732392E37 /* HLSDownloader.xcconfig */,
-				B3629E2F47315DFE2F1CA135248C11DE /* HLSDownloader-dummy.m */,
-				39E2A509F22AD46A6CE35E8E86A5CE52 /* HLSDownloader-prefix.pch */,
-				51695D675924D8A323ACB7098DA03789 /* HLSDownloader-umbrella.h */,
-				07B7CB41D83BA5570893BDC2809AD317 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/HLSDownloader";
-			sourceTree = "<group>";
-		};
-		44D5347904CF754D6785B84253F2574A /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		525CF97B7EC8A17FEC500B3BE4B9122C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1CEADB3E28911C0EAFA1689373422852 /* HLS.swift */,
-				C453CA040AED05E9BC112491247517DF /* HLSCache.swift */,
-				8A6FDA48393C5AB7ACFEB2621F3C75E8 /* HLSRepository.swift */,
+				B07AD28A4701B4BAF7C319BCDF9EA0CD /* HLS.swift */,
+				F4215895E620D4B182011A925548FBD3 /* HLSCache.swift */,
+				1A5B9B0BF2786C8C45CAB6A0E3343547 /* HLSRepository.swift */,
 			);
 			name = Model;
 			path = HLSDownloader/Classes/HLS/Model;
 			sourceTree = "<group>";
 		};
-		53908BCCD0156A4663E33AF2C4636601 /* Pods-HLSDownloader_Tests */ = {
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2CA7174D986A250E5838B9D030B85179 /* Info.plist */,
-				8EC1403417C2BD9E3BAD30F1090C8F3B /* Pods-HLSDownloader_Tests.modulemap */,
-				E315DA72D6A32F03C8F40511F5142D1D /* Pods-HLSDownloader_Tests-acknowledgements.markdown */,
-				417C4B0D8F3C574BBAE12EB06920016E /* Pods-HLSDownloader_Tests-acknowledgements.plist */,
-				9D7264CAB4A863E70C443C66B9EF4643 /* Pods-HLSDownloader_Tests-dummy.m */,
-				190D9B9F0092FBBAF0F7A57F36400BD0 /* Pods-HLSDownloader_Tests-frameworks.sh */,
-				C8641FC83372DC2540A402E6FBBFC240 /* Pods-HLSDownloader_Tests-resources.sh */,
-				D4632031195366B2397653F25EF7C1AA /* Pods-HLSDownloader_Tests-umbrella.h */,
-				D0B7BAB03F7CB733E623E35C663DCB7D /* Pods-HLSDownloader_Tests.debug.xcconfig */,
-				E68C544BD2344D629C67687C1604DF89 /* Pods-HLSDownloader_Tests.release.xcconfig */,
+				2CF2B7E59C01E99F754257B0EB21425C /* iOS */,
 			);
-			name = "Pods-HLSDownloader_Tests";
-			path = "Target Support Files/Pods-HLSDownloader_Tests";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		588F1CE805199FB152C181F1ADE415AF /* Pod */ = {
+		1ACF80060E21376A944717431A86F64A /* HLSDownloader */ = {
 			isa = PBXGroup;
 			children = (
-				0E2F05DCF8573187063FCA61F16BCC8A /* HLSDownloader.podspec */,
-				35E7A1BF7CFA7262D270C4F7C3A3CAD1 /* LICENSE */,
-				FB5BFEDB9ED7816DA02BADF05B3FCB0A /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		592A3FE84AC77DFB65D5E0AE09B87C68 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D1528C3B8268450FAFE1947FBD8DC42A /* HLSDownloader.framework */,
-				D0C257036FF3C07DF50430C296A432C0 /* Pods_HLSDownloader_Example.framework */,
-				E5E80EDEB521788E81A512D7CB2D15AC /* Pods_HLSDownloader_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		65597A24A8BAC72F0F5BCB4F3C341F09 /* HLSDownloader */ = {
-			isa = PBXGroup;
-			children = (
-				3F00141CC0C96CEB9825BD04728FEF91 /* HLSLoader.swift */,
-				9E1AE0D59B9C65655DF95AF517565C91 /* HLSManager.swift */,
-				693306BADF82868763BAE6A6C3768528 /* KeyLoader.swift */,
-				525CF97B7EC8A17FEC500B3BE4B9122C /* Model */,
-				588F1CE805199FB152C181F1ADE415AF /* Pod */,
-				3E19378B8FB6807AC4AEF46C355740EB /* Support Files */,
+				E5D6A8513A593B712F2677DC8A614B75 /* HLSLoader.swift */,
+				3B7F9DF44E13CD4060AADE451B8593D7 /* HLSManager.swift */,
+				1CB29EEE208B890C739CF6D0F29CD094 /* KeyLoader.swift */,
+				10072644FC84E92BBDB37BC46941FB75 /* Model */,
+				1B6A62337702DF4248976A700E3FBE12 /* Pod */,
+				4F182F066D5D9FB784E41EF6C5F43A3A /* Support Files */,
 			);
 			name = HLSDownloader;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		1B6A62337702DF4248976A700E3FBE12 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				F01ACF7D754C5466153C5E8BDADF9B4F /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				592A3FE84AC77DFB65D5E0AE09B87C68 /* Products */,
-				93B69C9BD33131F4739B6BF2AE2B5F5B /* Targets Support Files */,
+				E72E52CCA391054BAC303D3CD31D4BD0 /* HLSDownloader.podspec */,
+				083571FE6973D8B8B6AC620867CA5F54 /* LICENSE */,
+				7DA878F28B98A79E1FD7FC336C3822F6 /* README.md */,
 			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		93B69C9BD33131F4739B6BF2AE2B5F5B /* Targets Support Files */ = {
+		2CF2B7E59C01E99F754257B0EB21425C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C6879586F8834982067C8B2CD2D2113E /* Pods-HLSDownloader_Example */,
-				53908BCCD0156A4663E33AF2C4636601 /* Pods-HLSDownloader_Tests */,
+				25BC8723D88D4DB13F66A4C0F3DB1E72 /* AVKit.framework */,
+				0586A937C1BF2B1062D13582BF6C2536 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4F182F066D5D9FB784E41EF6C5F43A3A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B83F61F74567B6A09D4F1D4C5AC3B52 /* HLSDownloader.modulemap */,
+				ACA202447017707925FF6063CEB6E931 /* HLSDownloader.xcconfig */,
+				37802D9245E5391D93ECEC1A70791A81 /* HLSDownloader-dummy.m */,
+				73FCF334674F20C515DEABB27B967788 /* HLSDownloader-Info.plist */,
+				A0F6BA9D6EE39C6A1C79B27097ADC446 /* HLSDownloader-prefix.pch */,
+				53BF28488C22BEA9D5235952BE549BA5 /* HLSDownloader-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HLSDownloader";
+			sourceTree = "<group>";
+		};
+		BE26E8DA11A4EFF670FFC29B4C8F9294 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE346725DB0BC2F265AAD73433170E8A /* Pods-HLSDownloader_Example */,
+				F4377F956930ADE98DFF5AF1CA0BD254 /* Pods-HLSDownloader_Tests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		BE346725DB0BC2F265AAD73433170E8A /* Pods-HLSDownloader_Example */ = {
 			isa = PBXGroup;
 			children = (
-				44D5347904CF754D6785B84253F2574A /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C6879586F8834982067C8B2CD2D2113E /* Pods-HLSDownloader_Example */ = {
-			isa = PBXGroup;
-			children = (
-				943CCED753F804B9218088EAC3ACC743 /* Info.plist */,
-				B9E650B877FE9478BF0B4735F5631903 /* Pods-HLSDownloader_Example.modulemap */,
-				39BEE1148C171403FD6F88F1583533BA /* Pods-HLSDownloader_Example-acknowledgements.markdown */,
-				9E56ABBB1E1F6D13062420E561EE274D /* Pods-HLSDownloader_Example-acknowledgements.plist */,
-				37A6C514EB35A17DFB6DB7FC2673D08C /* Pods-HLSDownloader_Example-dummy.m */,
-				EF210CA917F815D745FEF5133292B816 /* Pods-HLSDownloader_Example-frameworks.sh */,
-				057DC158BB7ADEE8CBDE2A03438B144C /* Pods-HLSDownloader_Example-resources.sh */,
-				4E673EFAAE80CE3133AF72D9C24E3A47 /* Pods-HLSDownloader_Example-umbrella.h */,
-				7624FA63ABEFD5E6E720B9F8F38ECA67 /* Pods-HLSDownloader_Example.debug.xcconfig */,
-				03E493A17A60516C53151648C59EA137 /* Pods-HLSDownloader_Example.release.xcconfig */,
+				1430EC8550D01499DC3EFEA9027C50E6 /* Pods-HLSDownloader_Example.modulemap */,
+				A91CC3B37F9920D01D5A324D081D22F5 /* Pods-HLSDownloader_Example-acknowledgements.markdown */,
+				FEBB358FC8D5C24628D7B7F2F1A71B09 /* Pods-HLSDownloader_Example-acknowledgements.plist */,
+				2E7C5AEC2138DFC84020FB5A91B1CF86 /* Pods-HLSDownloader_Example-dummy.m */,
+				9E14E3284FBCC9518BE9587C7ED5B4BD /* Pods-HLSDownloader_Example-frameworks.sh */,
+				ABC22CA97C209DFFB4EE9F996587B95B /* Pods-HLSDownloader_Example-Info.plist */,
+				4234B64CBE3FFA4A627BA092422371DA /* Pods-HLSDownloader_Example-umbrella.h */,
+				C421B48D1534838506E6715A6CDD13DE /* Pods-HLSDownloader_Example.debug.xcconfig */,
+				A87AC035B6AD49FA7F2235BE1928A7ED /* Pods-HLSDownloader_Example.release.xcconfig */,
 			);
 			name = "Pods-HLSDownloader_Example";
 			path = "Target Support Files/Pods-HLSDownloader_Example";
 			sourceTree = "<group>";
 		};
-		F01ACF7D754C5466153C5E8BDADF9B4F /* Development Pods */ = {
+		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
-				65597A24A8BAC72F0F5BCB4F3C341F09 /* HLSDownloader */,
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				E8496DF159679B616C40EE4E3BD8CC0B /* Development Pods */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				F5CFBB7ECE05A7BA5130E156C4B2B11B /* Products */,
+				BE26E8DA11A4EFF670FFC29B4C8F9294 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E8496DF159679B616C40EE4E3BD8CC0B /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1ACF80060E21376A944717431A86F64A /* HLSDownloader */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F4377F956930ADE98DFF5AF1CA0BD254 /* Pods-HLSDownloader_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CBDB1BFBA898DA332F73AC189306EC69 /* Pods-HLSDownloader_Tests.modulemap */,
+				643EFB074765FAE09FF5E74DFE6C8F95 /* Pods-HLSDownloader_Tests-acknowledgements.markdown */,
+				79536B1446FF5A560B5794A6D52C5D0A /* Pods-HLSDownloader_Tests-acknowledgements.plist */,
+				A9586E7B3D0559F58BDFC18CB53C1469 /* Pods-HLSDownloader_Tests-dummy.m */,
+				BA98E40F46BFC6906857FF9DC33E1F68 /* Pods-HLSDownloader_Tests-Info.plist */,
+				3D95379746D0A6ACBC1EF327BC6BD39B /* Pods-HLSDownloader_Tests-umbrella.h */,
+				8EFF47043542539C55BCFC02F475B918 /* Pods-HLSDownloader_Tests.debug.xcconfig */,
+				7AE840C32A58BBBF7FD87E5B61B39462 /* Pods-HLSDownloader_Tests.release.xcconfig */,
+			);
+			name = "Pods-HLSDownloader_Tests";
+			path = "Target Support Files/Pods-HLSDownloader_Tests";
+			sourceTree = "<group>";
+		};
+		F5CFBB7ECE05A7BA5130E156C4B2B11B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				354F13C452312C438B030EF630503BE6 /* HLSDownloader.framework */,
+				86AF50CC28545F006DDDD2CD27CD0D48 /* Pods_HLSDownloader_Example.framework */,
+				B596DCC74BA8928001C391832D79FC43 /* Pods_HLSDownloader_Tests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1711CD39712BB995FE9221E19178110A /* Headers */ = {
+		92B39E69A9364AC5F2F59552F8D6ECB5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BF466F4299B4110DA0821A7D473A476 /* Pods-HLSDownloader_Tests-umbrella.h in Headers */,
+				B3A83A78E6ADFFA04B529321388AA46B /* HLSDownloader-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AEA354E5E5EC7AC13DCDE8EEF395C4E1 /* Headers */ = {
+		A0D71CDC1C581C920FC5D813247601D7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18D5A6E6260DAAF6FB82E89BC33565F5 /* HLSDownloader-umbrella.h in Headers */,
+				AC2300513348BA799C252722C0CA1381 /* Pods-HLSDownloader_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFC5CFBB4463B61C9333204C71E5CC5B /* Headers */ = {
+		DC103A9865A831B149A049E3FF267C97 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA15819B6181899FBD4B4483548C58F7 /* Pods-HLSDownloader_Example-umbrella.h in Headers */,
+				54AC8A254C75A15E8B34726DB39A226F /* Pods-HLSDownloader_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		6B93CE82DC12E342BE2088CAF27DCBA3 /* HLSDownloader */ = {
+		119FD1203DED946F887845A38DD30A29 /* Pods-HLSDownloader_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A56E213A7194CAA12EEDF6BA78320EBE /* Build configuration list for PBXNativeTarget "HLSDownloader" */;
+			buildConfigurationList = D7FFCEC47843A669E6E1EAE1427BA331 /* Build configuration list for PBXNativeTarget "Pods-HLSDownloader_Tests" */;
 			buildPhases = (
-				AEA354E5E5EC7AC13DCDE8EEF395C4E1 /* Headers */,
-				D9274AE9975F94F20395F97D0F33610F /* Sources */,
-				8D6674F2631982EB8FEB1FDB835A6A40 /* Frameworks */,
-				A542EE487ABD68AE410CEFB846074D90 /* Resources */,
+				DC103A9865A831B149A049E3FF267C97 /* Headers */,
+				79D884208FC21A2A82449D1DE3FA2BBD /* Sources */,
+				1D17EF1210F8F5CAB035A3B034DF4CBF /* Frameworks */,
+				535744293494930B29A157299BA33425 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C0151BA79C1C79CA158510223338E66 /* PBXTargetDependency */,
+			);
+			name = "Pods-HLSDownloader_Tests";
+			productName = "Pods-HLSDownloader_Tests";
+			productReference = B596DCC74BA8928001C391832D79FC43 /* Pods_HLSDownloader_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3CC4D58B1B60937B1F3CC761BF5757B7 /* Pods-HLSDownloader_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E580D46301F2631E9C0F0EFD0EFC14D /* Build configuration list for PBXNativeTarget "Pods-HLSDownloader_Example" */;
+			buildPhases = (
+				A0D71CDC1C581C920FC5D813247601D7 /* Headers */,
+				5B1AE6EFCE7418908A92454DDCEA7A66 /* Sources */,
+				216D3F1B36D206EB34F70D8EFB59F273 /* Frameworks */,
+				39920ABE1402AAE7706C94A4160AE18D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0116119EA5CF2FDD471E6D7796FCC72 /* PBXTargetDependency */,
+			);
+			name = "Pods-HLSDownloader_Example";
+			productName = "Pods-HLSDownloader_Example";
+			productReference = 86AF50CC28545F006DDDD2CD27CD0D48 /* Pods_HLSDownloader_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B8BF75264706EF57C72CCB815F2D5B83 /* HLSDownloader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6711D0854A070813BF3E32E87654E39A /* Build configuration list for PBXNativeTarget "HLSDownloader" */;
+			buildPhases = (
+				92B39E69A9364AC5F2F59552F8D6ECB5 /* Headers */,
+				A31A5C1C378EFAC30CD833AAEC06ED7A /* Sources */,
+				AB6537ACE294E2E130E30AE3D9358705 /* Frameworks */,
+				32714858019378A16F17AC88169D6D42 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -296,92 +332,53 @@
 			);
 			name = HLSDownloader;
 			productName = HLSDownloader;
-			productReference = D1528C3B8268450FAFE1947FBD8DC42A /* HLSDownloader.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7733F124DB8D70398B050A89457F3B8A /* Pods-HLSDownloader_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 264473351854F7395A11C095E968C968 /* Build configuration list for PBXNativeTarget "Pods-HLSDownloader_Tests" */;
-			buildPhases = (
-				1711CD39712BB995FE9221E19178110A /* Headers */,
-				F6609698BAF10B0AC2E912AD212989B5 /* Sources */,
-				191C76CDC3D83A37EC3778303AE887FE /* Frameworks */,
-				C2686AC32FA98439BA6AB7BF5DE1AA03 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B5FE631C4B8C654541CDE15BCC73CA63 /* PBXTargetDependency */,
-			);
-			name = "Pods-HLSDownloader_Tests";
-			productName = "Pods-HLSDownloader_Tests";
-			productReference = E5E80EDEB521788E81A512D7CB2D15AC /* Pods_HLSDownloader_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7B2C6CAA72EE3250C5BD84444B746BBE /* Pods-HLSDownloader_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DD3AB621CC6467FA32F8DD5B71F768B0 /* Build configuration list for PBXNativeTarget "Pods-HLSDownloader_Example" */;
-			buildPhases = (
-				AFC5CFBB4463B61C9333204C71E5CC5B /* Headers */,
-				41C9D2AD9B064743A8423DCB6D10E95A /* Sources */,
-				C37AF059618CB2D413BD5450992E59E8 /* Frameworks */,
-				E96928DEAD5E600B7EFF87A89653DDB0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A8FEBB6B653B982B34AB099B00EF0DC5 /* PBXTargetDependency */,
-			);
-			name = "Pods-HLSDownloader_Example";
-			productName = "Pods-HLSDownloader_Example";
-			productReference = D0C257036FF3C07DF50430C296A432C0 /* Pods_HLSDownloader_Example.framework */;
+			productReference = 354F13C452312C438B030EF630503BE6 /* HLSDownloader.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 592A3FE84AC77DFB65D5E0AE09B87C68 /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = F5CFBB7ECE05A7BA5130E156C4B2B11B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6B93CE82DC12E342BE2088CAF27DCBA3 /* HLSDownloader */,
-				7B2C6CAA72EE3250C5BD84444B746BBE /* Pods-HLSDownloader_Example */,
-				7733F124DB8D70398B050A89457F3B8A /* Pods-HLSDownloader_Tests */,
+				B8BF75264706EF57C72CCB815F2D5B83 /* HLSDownloader */,
+				3CC4D58B1B60937B1F3CC761BF5757B7 /* Pods-HLSDownloader_Example */,
+				119FD1203DED946F887845A38DD30A29 /* Pods-HLSDownloader_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A542EE487ABD68AE410CEFB846074D90 /* Resources */ = {
+		32714858019378A16F17AC88169D6D42 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C2686AC32FA98439BA6AB7BF5DE1AA03 /* Resources */ = {
+		39920ABE1402AAE7706C94A4160AE18D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E96928DEAD5E600B7EFF87A89653DDB0 /* Resources */ = {
+		535744293494930B29A157299BA33425 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -391,190 +388,58 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		41C9D2AD9B064743A8423DCB6D10E95A /* Sources */ = {
+		5B1AE6EFCE7418908A92454DDCEA7A66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B43BD8DA2531C727B786D9CB2AC176B4 /* Pods-HLSDownloader_Example-dummy.m in Sources */,
+				011014280375F27B273EAD9C5481325A /* Pods-HLSDownloader_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D9274AE9975F94F20395F97D0F33610F /* Sources */ = {
+		79D884208FC21A2A82449D1DE3FA2BBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BA51015B9506BF10AC1597E12776F80 /* HLS.swift in Sources */,
-				E596C1EA28505D786B29D6F5696E7A8C /* HLSCache.swift in Sources */,
-				0186A4B07F2E492967F3C64D53423147 /* HLSDownloader-dummy.m in Sources */,
-				9D48373B8A0B7EA0B22F90F5EEC9613F /* HLSLoader.swift in Sources */,
-				B195452E5B29C7A8C088FFE7FAA663C7 /* HLSManager.swift in Sources */,
-				A2FBAAB3EC42A070E13DCFEA6D9109CF /* HLSRepository.swift in Sources */,
-				B488B6B5509AA1DA7C0E74E5BFCF8362 /* KeyLoader.swift in Sources */,
+				83EB1B4B3FAEEBD02CDA42E66989C707 /* Pods-HLSDownloader_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6609698BAF10B0AC2E912AD212989B5 /* Sources */ = {
+		A31A5C1C378EFAC30CD833AAEC06ED7A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27C9CC4065D13D771A9853033F3882AD /* Pods-HLSDownloader_Tests-dummy.m in Sources */,
+				379D5A0AD97D149033F14B2A2C5D53A0 /* HLS.swift in Sources */,
+				0FA20ECF66A8ABCEDBE7934F19D68B11 /* HLSCache.swift in Sources */,
+				621608E1F32C174B02A69BE92D84738E /* HLSDownloader-dummy.m in Sources */,
+				0BC1D8DF3F707D943B0DB3F76486BD26 /* HLSLoader.swift in Sources */,
+				93AC07B4A6E8645B839E8DD33FF2AFF0 /* HLSManager.swift in Sources */,
+				81134AE3A26D7D08626734C94FA4711A /* HLSRepository.swift in Sources */,
+				1767A7E916E5C2432EF9A2194949099C /* KeyLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A8FEBB6B653B982B34AB099B00EF0DC5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = HLSDownloader;
-			target = 6B93CE82DC12E342BE2088CAF27DCBA3 /* HLSDownloader */;
-			targetProxy = D40698C1E7DF6CD6B044DF30767659BB /* PBXContainerItemProxy */;
-		};
-		B5FE631C4B8C654541CDE15BCC73CA63 /* PBXTargetDependency */ = {
+		2C0151BA79C1C79CA158510223338E66 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-HLSDownloader_Example";
-			target = 7B2C6CAA72EE3250C5BD84444B746BBE /* Pods-HLSDownloader_Example */;
-			targetProxy = A0F605986CBF73F933BD241BE4B0313B /* PBXContainerItemProxy */;
+			target = 3CC4D58B1B60937B1F3CC761BF5757B7 /* Pods-HLSDownloader_Example */;
+			targetProxy = B6B97DB1F20EDD62AB38D3439B121559 /* PBXContainerItemProxy */;
+		};
+		E0116119EA5CF2FDD471E6D7796FCC72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HLSDownloader;
+			target = B8BF75264706EF57C72CCB815F2D5B83 /* HLSDownloader */;
+			targetProxy = FE6DDB9FCA9283E601C653138ABB417B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		135F75AB89CBF403A2B54A0BA0DA7F3C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07812ADF34087942DA8F57A732392E37 /* HLSDownloader.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HLSDownloader/HLSDownloader-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HLSDownloader/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HLSDownloader/HLSDownloader.modulemap";
-				PRODUCT_MODULE_NAME = HLSDownloader;
-				PRODUCT_NAME = HLSDownloader;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		25CFDF83FD68CD8988B8363118B73DA2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7624FA63ABEFD5E6E720B9F8F38ECA67 /* Pods-HLSDownloader_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-HLSDownloader_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HLSDownloader_Example/Pods-HLSDownloader_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		42CA916B4F0703B6982D40F6C01EB80C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07812ADF34087942DA8F57A732392E37 /* HLSDownloader.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HLSDownloader/HLSDownloader-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HLSDownloader/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HLSDownloader/HLSDownloader.modulemap";
-				PRODUCT_MODULE_NAME = HLSDownloader;
-				PRODUCT_NAME = HLSDownloader;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		567680301B714361CB34C2207A8332F9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0B7BAB03F7CB733E623E35C663DCB7D /* Pods-HLSDownloader_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-HLSDownloader_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HLSDownloader_Tests/Pods-HLSDownloader_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8DDFA5FA8D4131BFD96E5E26F3672644 /* Debug */ = {
+		196DFA3E4A09A28224918543529A1885 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -603,8 +468,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -632,14 +495,47 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		B351D4B96332F6B883B4C0209140B346 /* Release */ = {
+		1CE7A3931EE674EEA66F771B4B10612D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E68C544BD2344D629C67687C1604DF89 /* Pods-HLSDownloader_Tests.release.xcconfig */;
+			baseConfigurationReference = ACA202447017707925FF6063CEB6E931 /* HLSDownloader.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HLSDownloader/HLSDownloader-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HLSDownloader/HLSDownloader-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HLSDownloader/HLSDownloader.modulemap";
+				PRODUCT_MODULE_NAME = HLSDownloader;
+				PRODUCT_NAME = HLSDownloader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2599E551C7ED17B034E9783591811EC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C421B48D1534838506E6715A6CDD13DE /* Pods-HLSDownloader_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -652,7 +548,108 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-HLSDownloader_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-HLSDownloader_Example/Pods-HLSDownloader_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HLSDownloader_Example/Pods-HLSDownloader_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		69534AA3E5F2D221C812A7457CCD0AD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACA202447017707925FF6063CEB6E931 /* HLSDownloader.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HLSDownloader/HLSDownloader-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HLSDownloader/HLSDownloader-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HLSDownloader/HLSDownloader.modulemap";
+				PRODUCT_MODULE_NAME = HLSDownloader;
+				PRODUCT_NAME = HLSDownloader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8FC0E31FA9D13BC6B196043EF54A9314 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A87AC035B6AD49FA7F2235BE1928A7ED /* Pods-HLSDownloader_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HLSDownloader_Example/Pods-HLSDownloader_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HLSDownloader_Example/Pods-HLSDownloader_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A8FF7F59E5DDFBF7939EEDDFD815FADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AE840C32A58BBBF7FD87E5B61B39462 /* Pods-HLSDownloader_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HLSDownloader_Tests/Pods-HLSDownloader_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -672,11 +669,10 @@
 			};
 			name = Release;
 		};
-		D5F759C82752B2EB010DB3CD3D69707C /* Release */ = {
+		B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -705,8 +701,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -728,15 +722,16 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		E89D18364975350F68F713AD5D85D38D /* Release */ = {
+		D14C14321B9CF2CBE0B66B38C4192A4B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03E493A17A60516C53151648C59EA137 /* Pods-HLSDownloader_Example.release.xcconfig */;
+			baseConfigurationReference = 8EFF47043542539C55BCFC02F475B918 /* Pods-HLSDownloader_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -749,12 +744,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-HLSDownloader_Example/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-HLSDownloader_Tests/Pods-HLSDownloader_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HLSDownloader_Example/Pods-HLSDownloader_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-HLSDownloader_Tests/Pods-HLSDownloader_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -763,52 +758,51 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		264473351854F7395A11C095E968C968 /* Build configuration list for PBXNativeTarget "Pods-HLSDownloader_Tests" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				567680301B714361CB34C2207A8332F9 /* Debug */,
-				B351D4B96332F6B883B4C0209140B346 /* Release */,
+				196DFA3E4A09A28224918543529A1885 /* Debug */,
+				B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		4E580D46301F2631E9C0F0EFD0EFC14D /* Build configuration list for PBXNativeTarget "Pods-HLSDownloader_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8DDFA5FA8D4131BFD96E5E26F3672644 /* Debug */,
-				D5F759C82752B2EB010DB3CD3D69707C /* Release */,
+				2599E551C7ED17B034E9783591811EC9 /* Debug */,
+				8FC0E31FA9D13BC6B196043EF54A9314 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A56E213A7194CAA12EEDF6BA78320EBE /* Build configuration list for PBXNativeTarget "HLSDownloader" */ = {
+		6711D0854A070813BF3E32E87654E39A /* Build configuration list for PBXNativeTarget "HLSDownloader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				135F75AB89CBF403A2B54A0BA0DA7F3C /* Debug */,
-				42CA916B4F0703B6982D40F6C01EB80C /* Release */,
+				69534AA3E5F2D221C812A7457CCD0AD9 /* Debug */,
+				1CE7A3931EE674EEA66F771B4B10612D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD3AB621CC6467FA32F8DD5B71F768B0 /* Build configuration list for PBXNativeTarget "Pods-HLSDownloader_Example" */ = {
+		D7FFCEC47843A669E6E1EAE1427BA331 /* Build configuration list for PBXNativeTarget "Pods-HLSDownloader_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				25CFDF83FD68CD8988B8363118B73DA2 /* Debug */,
-				E89D18364975350F68F713AD5D85D38D /* Release */,
+				D14C14321B9CF2CBE0B66B38C4192A4B /* Debug */,
+				A8FF7F59E5DDFBF7939EEDDFD815FADB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

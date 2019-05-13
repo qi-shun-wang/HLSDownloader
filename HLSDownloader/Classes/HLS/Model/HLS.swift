@@ -24,6 +24,7 @@ public struct HLS: Model {
 }
 enum HLSError: Error {
     case invalidState
+    case invalidOperation
 }
 extension HLS: Hashable {}
 extension HLS {

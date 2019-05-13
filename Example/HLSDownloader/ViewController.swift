@@ -83,6 +83,7 @@ extension ViewController: UITableViewDataSource {
         cell.suspend = suspend
         cell.play = play
         cell.pause = pause
+        cell.delete = delete
         return cell
     }
     
@@ -129,6 +130,24 @@ extension ViewController: UITableViewDataSource {
         }
     }
     
+    func delete( _ url: String?) {
+        if check(url: url) {
+            do {
+                let (isExist, hls) = try manager.isExist(url!)
+                if isExist {
+                    print("[URL is exist] \(url!)")
+                    try manager.remove(hls!)
+                }
+                else {
+                    print("[URL is not exist] \(url!)")
+                }
+            }
+            catch let err {
+                print(err)
+            }
+        }
+    }
+    
     func suspend( _ url: String?) {
         if check(url: url) {
             do {
@@ -164,7 +183,6 @@ extension ViewController: UITableViewDataSource {
                 print(err)
             }
         }
-        
     }
     
     private func check(url: String?) -> Bool {

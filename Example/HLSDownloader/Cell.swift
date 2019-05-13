@@ -29,6 +29,7 @@ class Cell: UITableViewCell {
     var pause: CellAction?
     var download: URLAction?
     var suspend: URLAction?
+    var delete: URLAction?
     
     @IBAction func playAction(_ sender: UIButton) {
         play?(self, url)
@@ -44,6 +45,10 @@ class Cell: UITableViewCell {
     
     @IBAction func suspendAction(_ sender: UIButton) {
         suspend?(url)
+    }
+    
+    @IBAction func deleteAction(_ sender: UIButton) {
+        delete?(url)
     }
     
     override func awakeFromNib() {
