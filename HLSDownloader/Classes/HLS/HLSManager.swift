@@ -1,14 +1,27 @@
 import AVKit
 
-public protocol ProgressDelegate {
+public protocol HLSManagerDelegate {
     func progress(hls: HLS, percentage: Float)
     func keyWillDownload(hls: HLS)
     func assetDidDownload(hls: HLS)
     func keyDidDownload(hls: HLS)
+    
+    func didRemove(hls: HLS)
+    func didSuspend(hls: HLS)
+    func didRestore(hls: HLS)
+    func didDownload(hls: HLS)
+    func fail(on hls: HLS, with error: HLSManagerError)
 }
+public enum HLSManagerError: Error {
+    case unknownRemoveFailReason
+    case unknownSuspendFailReason
+    case unknownDownloadFailReason
+    case unknownRestoreFailReason
+}
+
 public protocol HLSManager: AVAssetDownloadDelegate {
     var loader: HLSLoader? {get set}
-    var delegate: ProgressDelegate? {get set}
+    var delegate: HLSManagerDelegate? {get set}
     
     func currentCaches() throws -> HLSCache
     func createHLS(_ url: String) throws -> HLS
@@ -28,7 +41,7 @@ public protocol HLSManager: AVAssetDownloadDelegate {
 
 public class DownloadHLSManager: NSObject, HLSManager {
     
-    public var delegate: ProgressDelegate?
+    public var delegate: HLSManagerDelegate?
     
     private var config: URLSessionConfiguration!
     
@@ -55,19 +68,18 @@ public class DownloadHLSManager: NSObject, HLSManager {
     public func suspend(_ hls: HLS) throws {
         print("[Suspend HLS]\(hls.url)")
         downloadSession.getAllTasks { (tasks) in
-            for task in tasks {
-                
+            let target = tasks.first(where: { (task) -> Bool in
                 let taskAssetUrl = (task as! AVAssetDownloadTask).urlAsset.url.absoluteString
-                
-                if taskAssetUrl == hls.url
-                {
-                    print("[Suspend Task]\(taskAssetUrl)")
-                    task.suspend()
-                } else {
-                    print("[Suspend Task Searched]\(taskAssetUrl)")
-                }
-            }
+                return taskAssetUrl == hls.url
+            })
             
+            if let task = target {
+                print("[Suspend Task]\(hls.url)")
+                task.suspend()
+                self.delegate?.didSuspend(hls: hls)
+            } else {
+                self.delegate?.fail(on: hls, with: .unknownSuspendFailReason)
+            }
         }
     }
     
@@ -76,19 +88,25 @@ public class DownloadHLSManager: NSObject, HLSManager {
         guard let state = HLS.State(rawValue: hls.state) else {throw HLSError.invalidState}
         switch state {
         case .downloaded:
-            try repository.delete(hls: hls)
+            do {
+                try repository.delete(hls: hls)
+                delegate?.didRemove(hls: hls)
+            } catch {
+                delegate?.fail(on: hls, with: .unknownRemoveFailReason)
+            }
         default:
             downloadSession.getAllTasks { (tasks) in
-                for task in tasks {
+                let target = tasks.first(where: { (task) -> Bool in
                     let taskAssetUrl = (task as! AVAssetDownloadTask).urlAsset.url.absoluteString
-                    if taskAssetUrl == hls.url
-                    {
-                        print("[Cancel Task]\(taskAssetUrl)")
-                        task.cancel()
-                    } else {
-                        print("[Searching Next]\(taskAssetUrl)")
-                    }
-                    
+                    return taskAssetUrl == hls.url
+                })
+                
+                if let task = target {
+                    print("[Cancel Task]\(hls.url)")
+                    task.cancel()
+                    self.delegate?.didRemove(hls: hls)
+                } else {
+                    self.delegate?.fail(on: hls, with: .unknownRemoveFailReason)
                 }
             }
         }
@@ -97,33 +115,25 @@ public class DownloadHLSManager: NSObject, HLSManager {
     public func restore(_ hls: HLS) throws {
         print("[Restore HLS]\(hls.url)")
         downloadSession.getAllTasks { (tasks) in
-            var isTaskExist: Bool = false
-            for task in tasks {
+            let target = tasks.first(where: { (task) -> Bool in
                 let taskAssetUrl = (task as! AVAssetDownloadTask).urlAsset.url.absoluteString
-                
-                if taskAssetUrl == hls.url
-                {
-                    print("[Restore Task]\(taskAssetUrl)")
-                    isTaskExist = true
-                    task.resume()
-                } else {
-                    print("[Restore Task Searched]\(taskAssetUrl)")
-                }
-                
-                
-            }
-            if isTaskExist {
-                print("[Restoring]\(hls)")
+                return taskAssetUrl == hls.url
+            })
+            
+            if let task = target {
+                print("[Cancel Task]\(hls.url)")
+                task.resume()
+                self.delegate?.didRestore(hls: hls)
             } else {
                 do {
                     print("[Recovering]\(hls)")
+                    try self.repository.delete(hls: hls)
                     try self.download(hls)
                 } catch {
-                    print("[ERROR]Recover fail:\(hls)")
+                    self.delegate?.fail(on: hls, with: .unknownRestoreFailReason)
                 }
             }
         }
-        
     }
     public func restoreAll() {
         

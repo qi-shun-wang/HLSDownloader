@@ -49,18 +49,41 @@ extension ViewController {
 }
 
 
-extension ViewController: ProgressDelegate {
-    public func keyWillDownload(hls: HLS) {
-        
+extension ViewController: HLSManagerDelegate {
+    func keyWillDownload(hls: HLS) {
+        print("[Key Downloading]")
     }
     
-    public func assetDidDownload(hls: HLS) {
-        
+    func assetDidDownload(hls: HLS) {
+        print("[Asset Downloaded]")
     }
     
-    public func keyDidDownload(hls: HLS) {
-        
+    func keyDidDownload(hls: HLS) {
+        print("[Key Downloaded]")
     }
+    
+    func didRemove(hls: HLS) {
+        print("[Removed]")
+    }
+    
+    func didSuspend(hls: HLS) {
+        print("[Suspended]")
+    }
+    
+    func didRestore(hls: HLS) {
+        print("[Restored]")
+    }
+    
+    func didDownload(hls: HLS) {
+        print("[Downloaded]")
+    }
+    
+    func fail(on hls: HLS, with error: HLSManagerError) {
+        print("[Fail]")
+        print(hls)
+        print(error)
+    }
+    
     
     public func progress(hls: HLS, percentage: Float) {
         guard let index = urls.firstIndex(of: hls.url) else {return}
