@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HLSDownloader'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.swift_version = '5.0'
   s.summary          = 'Download Crypted HLS with server key and play video as local playing in iOS device.'
 # This description is used to generate tags and improve search results.

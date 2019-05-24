@@ -52,36 +52,49 @@ extension ViewController {
 extension ViewController: HLSManagerDelegate {
     func keyWillDownload(hls: HLS) {
         print("[Key Downloading]")
+        updateHLSContent(text: String(describing: try? manager.currentCaches()))
     }
     
     func assetDidDownload(hls: HLS) {
         print("[Asset Downloaded]")
+        updateHLSContent(text: String(describing: try? manager.currentCaches()))
     }
     
     func keyDidDownload(hls: HLS) {
         print("[Key Downloaded]")
+        updateHLSContent(text: String(describing: try? manager.currentCaches()))
     }
     
     func didRemove(hls: HLS) {
         print("[Removed]")
+        guard let index = urls.firstIndex(of: hls.url) else {return}
+        let cellIndexPath = IndexPath(row: index, section: 0)
+        let cell = (tableView.cellForRow(at: cellIndexPath) as? Cell)
+        cell?.progresBar.progress = 0
+        updateHLSContent(text: String(describing: try? manager.currentCaches()))
     }
     
     func didSuspend(hls: HLS) {
         print("[Suspended]")
+        updateHLSContent(text: String(describing: try? manager.currentCaches()))
     }
     
     func didRestore(hls: HLS) {
         print("[Restored]")
+        updateHLSContent(text: String(describing: try? manager.currentCaches()))
     }
     
     func didDownload(hls: HLS) {
         print("[Downloaded]")
+        updateHLSContent(text: String(describing: try? manager.currentCaches()))
     }
     
     func fail(on hls: HLS, with error: HLSManagerError) {
+        updateHLSContent(text: String(describing: try? manager.currentCaches()))
         print("[Fail]")
         print(hls)
         print(error)
+        try? manager.remove(hls)
     }
     
     
@@ -90,6 +103,7 @@ extension ViewController: HLSManagerDelegate {
         let cellIndexPath = IndexPath(row: index, section: 0)
         let cell = (tableView.cellForRow(at: cellIndexPath) as? Cell)
         cell?.progresBar.progress = percentage
+        updateHLSContent(text: String(describing: try? manager.currentCaches()))
     }
     
 }
@@ -107,6 +121,7 @@ extension ViewController: UITableViewDataSource {
         cell.play = play
         cell.pause = pause
         cell.delete = delete
+        cell.restore = restore
         return cell
     }
     
@@ -171,6 +186,23 @@ extension ViewController: UITableViewDataSource {
         }
     }
     
+    func restore( _ url: String?) {
+        if check(url: url) {
+            do {
+                let (isExist, hls) = try manager.isExist(url!)
+                if isExist {
+                    print("[URL is exist] \(url!)")
+                    try manager.restore(hls!)
+                }
+                else {
+                    print("[URL is not exist] \(url!)")
+                }
+            }
+            catch let err {
+                print(err)
+            }
+        }
+    }
     func suspend( _ url: String?) {
         if check(url: url) {
             do {
@@ -192,10 +224,9 @@ extension ViewController: UITableViewDataSource {
     func download(_ url: String?) {
         if check(url: url) {
             do {
-                let (isExist, hls) = try manager.isExist(url!)
+                let (isExist, _) = try manager.isExist(url!)
                 if isExist {
                     print("[URL is exist] \(url!)")
-                    try manager.restore(hls!)
                 } else {
                     print("[URL is not exist] \(url!)")
                     let hls = try manager.createHLS(url!)

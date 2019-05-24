@@ -10,12 +10,12 @@
 		36D4783E228519E500779558 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D4783C228519E500779558 /* Cell.swift */; };
 		36D4783F228519E500779558 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D4783D228519E500779558 /* ViewController.swift */; };
 		36D47841228519ED00779558 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D47840228519ED00779558 /* Main.storyboard */; };
-		4D40A091A2160454BBF3B9C0 /* Pods_HLSDownloader_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67198AC837A180E53A108CA /* Pods_HLSDownloader_Example.framework */; };
+		531AD392101CFA10700C4E84 /* Pods_HLSDownloader_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F2EF9BC46DE1E169C7D16C /* Pods_HLSDownloader_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		84CB92E0F2F1B4F0D5EB11AC /* Pods_HLSDownloader_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6CDD0FA54DBE8A9ECB14CF /* Pods_HLSDownloader_Tests.framework */; };
+		A4E5384EC1FCDCCC52EF1B07 /* Pods_HLSDownloader_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB79038C9809053600B05F3A /* Pods_HLSDownloader_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +29,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F0219831EDB8472DB39E561 /* Pods-HLSDownloader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLSDownloader_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-HLSDownloader_Example/Pods-HLSDownloader_Example.release.xcconfig"; sourceTree = "<group>"; };
 		36D4783C228519E500779558 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		36D4783D228519E500779558 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		36D47840228519ED00779558 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -43,12 +42,13 @@
 		607FACE51AFB9204008FA782 /* HLSDownloader_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HLSDownloader_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		6A36FC8C45CA014055C59B2F /* Pods-HLSDownloader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLSDownloader_Example.release.xcconfig"; path = "Target Support Files/Pods-HLSDownloader_Example/Pods-HLSDownloader_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6C76AC88A951E74B17B3CBD0 /* HLSDownloader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HLSDownloader.podspec; path = ../HLSDownloader.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		78D2E0F07A961F728ADFDFA7 /* Pods-HLSDownloader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLSDownloader_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HLSDownloader_Tests/Pods-HLSDownloader_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		7E6CDD0FA54DBE8A9ECB14CF /* Pods_HLSDownloader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HLSDownloader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E112F9CEA20AE1F41CE0D1D /* Pods-HLSDownloader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLSDownloader_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HLSDownloader_Tests/Pods-HLSDownloader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D032A46A33925D82E50AD1F2 /* Pods-HLSDownloader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLSDownloader_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HLSDownloader_Example/Pods-HLSDownloader_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E67198AC837A180E53A108CA /* Pods_HLSDownloader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HLSDownloader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		745031CF3B6CDCA7FFA0AC40 /* Pods-HLSDownloader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLSDownloader_Tests.debug.xcconfig"; path = "Target Support Files/Pods-HLSDownloader_Tests/Pods-HLSDownloader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		82F2C303122440097D81702A /* Pods-HLSDownloader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLSDownloader_Tests.release.xcconfig"; path = "Target Support Files/Pods-HLSDownloader_Tests/Pods-HLSDownloader_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		8A57C0ADE9024C539B06D1DD /* Pods-HLSDownloader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLSDownloader_Example.debug.xcconfig"; path = "Target Support Files/Pods-HLSDownloader_Example/Pods-HLSDownloader_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BB79038C9809053600B05F3A /* Pods_HLSDownloader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HLSDownloader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3F2EF9BC46DE1E169C7D16C /* Pods_HLSDownloader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HLSDownloader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D40A091A2160454BBF3B9C0 /* Pods_HLSDownloader_Example.framework in Frameworks */,
+				A4E5384EC1FCDCCC52EF1B07 /* Pods_HLSDownloader_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,33 +64,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84CB92E0F2F1B4F0D5EB11AC /* Pods_HLSDownloader_Tests.framework in Frameworks */,
+				531AD392101CFA10700C4E84 /* Pods_HLSDownloader_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		19D88F62FF2D2EEEAF507D5F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E67198AC837A180E53A108CA /* Pods_HLSDownloader_Example.framework */,
-				7E6CDD0FA54DBE8A9ECB14CF /* Pods_HLSDownloader_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4C4F0A204C8541FDA85AE1A2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D032A46A33925D82E50AD1F2 /* Pods-HLSDownloader_Example.debug.xcconfig */,
-				2F0219831EDB8472DB39E561 /* Pods-HLSDownloader_Example.release.xcconfig */,
-				8E112F9CEA20AE1F41CE0D1D /* Pods-HLSDownloader_Tests.debug.xcconfig */,
-				78D2E0F07A961F728ADFDFA7 /* Pods-HLSDownloader_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -98,8 +78,8 @@
 				607FACD21AFB9204008FA782 /* Example for HLSDownloader */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				4C4F0A204C8541FDA85AE1A2 /* Pods */,
-				19D88F62FF2D2EEEAF507D5F /* Frameworks */,
+				D86F722DA735A513E7862584 /* Pods */,
+				F34986CB6355B53DF6ADC891 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,6 +142,27 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		D86F722DA735A513E7862584 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A57C0ADE9024C539B06D1DD /* Pods-HLSDownloader_Example.debug.xcconfig */,
+				6A36FC8C45CA014055C59B2F /* Pods-HLSDownloader_Example.release.xcconfig */,
+				745031CF3B6CDCA7FFA0AC40 /* Pods-HLSDownloader_Tests.debug.xcconfig */,
+				82F2C303122440097D81702A /* Pods-HLSDownloader_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F34986CB6355B53DF6ADC891 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB79038C9809053600B05F3A /* Pods_HLSDownloader_Example.framework */,
+				E3F2EF9BC46DE1E169C7D16C /* Pods_HLSDownloader_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,11 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "HLSDownloader_Example" */;
 			buildPhases = (
-				501C0A7CDCA0961481EF1D72 /* [CP] Check Pods Manifest.lock */,
+				6E8A03D0AC71CC41E3C853B0 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				FB5990E656F435470ECDCFF0 /* [CP] Embed Pods Frameworks */,
+				FB45D76F7EDA8ECC55EA0C55 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,7 +189,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "HLSDownloader_Tests" */;
 			buildPhases = (
-				E16D884198C52C63FE86F842 /* [CP] Check Pods Manifest.lock */,
+				19F065A9655D20BB509D7412 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -271,29 +272,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		501C0A7CDCA0961481EF1D72 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HLSDownloader_Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E16D884198C52C63FE86F842 /* [CP] Check Pods Manifest.lock */ = {
+		19F065A9655D20BB509D7412 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -315,7 +294,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FB5990E656F435470ECDCFF0 /* [CP] Embed Pods Frameworks */ = {
+		6E8A03D0AC71CC41E3C853B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HLSDownloader_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB45D76F7EDA8ECC55EA0C55 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -487,7 +488,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D032A46A33925D82E50AD1F2 /* Pods-HLSDownloader_Example.debug.xcconfig */;
+			baseConfigurationReference = 8A57C0ADE9024C539B06D1DD /* Pods-HLSDownloader_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V932DYVRVA;
@@ -502,7 +503,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F0219831EDB8472DB39E561 /* Pods-HLSDownloader_Example.release.xcconfig */;
+			baseConfigurationReference = 6A36FC8C45CA014055C59B2F /* Pods-HLSDownloader_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V932DYVRVA;
@@ -517,7 +518,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E112F9CEA20AE1F41CE0D1D /* Pods-HLSDownloader_Tests.debug.xcconfig */;
+			baseConfigurationReference = 745031CF3B6CDCA7FFA0AC40 /* Pods-HLSDownloader_Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = V932DYVRVA;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -539,7 +540,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78D2E0F07A961F728ADFDFA7 /* Pods-HLSDownloader_Tests.release.xcconfig */;
+			baseConfigurationReference = 82F2C303122440097D81702A /* Pods-HLSDownloader_Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = V932DYVRVA;
 				FRAMEWORK_SEARCH_PATHS = (

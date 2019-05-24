@@ -30,7 +30,11 @@ class Cell: UITableViewCell {
     var download: URLAction?
     var suspend: URLAction?
     var delete: URLAction?
+    var restore: URLAction?
     
+    @IBAction func restoreAction(_ sender: UIButton) {
+        restore?(url)
+    }
     @IBAction func playAction(_ sender: UIButton) {
         play?(self, url)
     }

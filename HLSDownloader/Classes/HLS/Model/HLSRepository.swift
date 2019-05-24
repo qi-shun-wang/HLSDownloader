@@ -39,7 +39,7 @@ public class LocalHLSRepository {
             print("[LocalHLSRepository] Not Exist")
             print("[LocalHLSRepository] Creating")
             
-            let cache = HLSCache(timestamp: Date(), caches: [])
+            let cache = HLSCache(timestamp: Date(), version: "0.3.0", caches: [])
             let encoder = JSONEncoder()
             encoder.dateEncodingStrategy = .formatted(dateFormatter)
             
@@ -80,8 +80,6 @@ extension LocalHLSRepository: HLSRepository {
     }
     
     public func delete(hls: HLS) throws {
-        guard let movpkgPath = hls.movpkgLocalFileUrl else {throw HLSError.invalidOperation}
-        try FileManager.default.removeItem(at: movpkgPath)
         var cache = try queryHLSCache()
         if let index = cache.caches.lastIndex(where: { ($0.uuid == hls.uuid) }) {
             cache.caches.remove(at: index)
@@ -91,6 +89,10 @@ extension LocalHLSRepository: HLSRepository {
             let url = URL(fileURLWithPath: filePath)
             try new.write(to: url)
         }
+        // Warning: movpkgLocalFileUrl location is possible be nil before completed download task.
+        guard let movpkgPath = hls.movpkgLocalFileUrl else {return}
+        try FileManager.default.removeItem(at: movpkgPath)
+        
     }
     
     public func create(hls: HLS) throws -> HLS {

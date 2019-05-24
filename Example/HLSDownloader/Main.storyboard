@@ -71,21 +71,28 @@
                                                     <rect key="frame" x="104" y="23" width="69" height="69.5"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0o-FD-JJ2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="69" height="18"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="69" height="11.5"/>
                                                             <state key="normal" title="Download"/>
                                                             <connections>
                                                                 <action selector="downloadAction:" destination="Cz8-2G-4ce" eventType="touchUpInside" id="VjO-i3-Its"/>
                                                             </connections>
                                                         </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzJ-jB-O7H">
+                                                            <rect key="frame" x="0.0" y="19.5" width="69" height="11.5"/>
+                                                            <state key="normal" title="Restore"/>
+                                                            <connections>
+                                                                <action selector="restoreAction:" destination="Cz8-2G-4ce" eventType="touchUpInside" id="eoF-yl-Y4t"/>
+                                                            </connections>
+                                                        </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbR-HH-uwt">
-                                                            <rect key="frame" x="0.0" y="26" width="69" height="17.5"/>
+                                                            <rect key="frame" x="0.0" y="39" width="69" height="11"/>
                                                             <state key="normal" title="Suspend"/>
                                                             <connections>
                                                                 <action selector="suspendAction:" destination="Cz8-2G-4ce" eventType="touchUpInside" id="Eta-7f-kXL"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Szf-wA-dOQ">
-                                                            <rect key="frame" x="0.0" y="51.5" width="69" height="18"/>
+                                                            <rect key="frame" x="0.0" y="58" width="69" height="11.5"/>
                                                             <state key="normal" title="Delete"/>
                                                             <connections>
                                                                 <action selector="deleteAction:" destination="Cz8-2G-4ce" eventType="touchUpInside" id="UmK-l3-xdv"/>

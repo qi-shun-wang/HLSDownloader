@@ -12,6 +12,7 @@ public protocol HLSManagerDelegate {
     func didDownload(hls: HLS)
     func fail(on hls: HLS, with error: HLSManagerError)
 }
+
 public enum HLSManagerError: Error {
     case unknownRemoveFailReason
     case unknownSuspendFailReason
@@ -38,7 +39,6 @@ public protocol HLSManager: AVAssetDownloadDelegate {
     
 }
 
-
 public class DownloadHLSManager: NSObject, HLSManager {
     
     public var delegate: HLSManagerDelegate?
@@ -53,6 +53,7 @@ public class DownloadHLSManager: NSObject, HLSManager {
                                          assetDownloadDelegate: self,
                                          delegateQueue: .main)
     }()
+    
     private var repository: HLSRepository
     
     public override init() {
@@ -66,15 +67,21 @@ public class DownloadHLSManager: NSObject, HLSManager {
     }
     
     public func suspend(_ hls: HLS) throws {
-        print("[Suspend HLS]\(hls.url)")
-        downloadSession.getAllTasks { (tasks) in
+        debugPrint("[Suspend HLS]\(hls.url)")
+        self.downloadSession.getAllTasks { (tasks) in
             let target = tasks.first(where: { (task) -> Bool in
-                let taskAssetUrl = (task as! AVAssetDownloadTask).urlAsset.url.absoluteString
-                return taskAssetUrl == hls.url
+                return task.taskIdentifier == hls.taskIdentifier
             })
             
             if let task = target {
-                print("[Suspend Task]\(hls.url)")
+                debugPrint("[Suspend Task]<\(task.taskIdentifier)> \(hls.url)")
+                do {
+                    var new = hls
+                    new.state = HLS.State.suspended.rawValue
+                    try self.repository.update(hls: new)
+                } catch let err {
+                    print("====>\(err)")
+                }
                 task.suspend()
                 self.delegate?.didSuspend(hls: hls)
             } else {
@@ -84,63 +91,54 @@ public class DownloadHLSManager: NSObject, HLSManager {
     }
     
     public func remove(_ hls: HLS) throws {
-        print("[Remove HLS]\(hls.url)")
-        guard let state = HLS.State(rawValue: hls.state) else {throw HLSError.invalidState}
-        switch state {
-        case .downloaded:
-            do {
-                try repository.delete(hls: hls)
-                delegate?.didRemove(hls: hls)
-            } catch {
-                delegate?.fail(on: hls, with: .unknownRemoveFailReason)
+        debugPrint("[Remove HLS]\(hls.url)")
+        
+        downloadSession.getAllTasks { (tasks) in
+            let target = tasks.first(where: { (task) -> Bool in
+                return task.taskIdentifier == hls.taskIdentifier
+            })
+            if let task = target {
+                debugPrint("[Cancel Task]\(hls.url)")
+                task.cancel()
             }
-        default:
-            downloadSession.getAllTasks { (tasks) in
-                let target = tasks.first(where: { (task) -> Bool in
-                    let taskAssetUrl = (task as! AVAssetDownloadTask).urlAsset.url.absoluteString
-                    return taskAssetUrl == hls.url
-                })
-                
-                if let task = target {
-                    print("[Cancel Task]\(hls.url)")
-                    task.cancel()
-                    self.delegate?.didRemove(hls: hls)
-                } else {
-                    self.delegate?.fail(on: hls, with: .unknownRemoveFailReason)
-                }
+            do {
+                try self.repository.delete(hls: hls)
+                self.delegate?.didRemove(hls: hls)
+            } catch {
+                self.delegate?.fail(on: hls, with: .unknownRemoveFailReason)
             }
         }
     }
     
     public func restore(_ hls: HLS) throws {
-        print("[Restore HLS]\(hls.url)")
+        debugPrint("[Restore HLS]\(hls.url)")
         downloadSession.getAllTasks { (tasks) in
             let target = tasks.first(where: { (task) -> Bool in
-                let taskAssetUrl = (task as! AVAssetDownloadTask).urlAsset.url.absoluteString
-                return taskAssetUrl == hls.url
+                return task.taskIdentifier == hls.taskIdentifier
             })
             
             if let task = target {
-                print("[Cancel Task]\(hls.url)")
+                debugPrint("[Resume Task]<\(task.taskIdentifier)> \(hls.url)")
+                do {
+                    var new = hls
+                    new.state = HLS.State.downloading.rawValue
+                    try self.repository.update(hls: new)
+                } catch let err {
+                    print("====>\(err)")
+                }
                 task.resume()
                 self.delegate?.didRestore(hls: hls)
             } else {
-                do {
-                    print("[Recovering]\(hls)")
-                    try self.repository.delete(hls: hls)
-                    try self.download(hls)
-                } catch {
-                    self.delegate?.fail(on: hls, with: .unknownRestoreFailReason)
-                }
+                self.delegate?.fail(on: hls, with: .unknownRestoreFailReason)
             }
         }
     }
+    
     public func restoreAll() {
-        
-        downloadSession.getAllTasks { (tasks) in
+        self.downloadSession.getAllTasks { (tasks) in
             for task in tasks {
                 guard let downloadTask = task as? AVAssetDownloadTask else { break }
-                print("[Restoring]\(downloadTask)")
+                debugPrint("[Restoring]\(downloadTask)")
                 downloadTask.resume()
             }
         }
@@ -164,7 +162,8 @@ public class DownloadHLSManager: NSObject, HLSManager {
                       m3u8LocalPath: nil,
                       keyLocalPath: nil,
                       state: HLS.State.pendding.rawValue,
-                      taskIdentifier: nil)
+                      taskIdentifier: nil,
+                      percentage: 0)
         
         return try repository.create(hls: hls)
     }
@@ -179,20 +178,21 @@ public class DownloadHLSManager: NSObject, HLSManager {
     
     // Warring: You must create hls entity before call this download function.
     public func download(_ hls: HLS) throws {
-        print("[Download HLS]\(hls.url)")
-        var new = hls
-        new.state = HLS.State.downloading.rawValue
-        try repository.update(hls: new)
-        
-        let asset = AVURLAsset(url: URL(string: new.url)!, options: nil)
-        let task = downloadSession.makeAssetDownloadTask(asset: asset,
-                                                         assetTitle: new.uuid.uuidString,
-                                                         assetArtworkData: nil,
-                                                         options: nil)
-        
-        
-        task?.resume()
-        
+        debugPrint("[Download HLS]\(hls.url)")
+        do {
+            var new = hls
+            let asset = AVURLAsset(url: URL(string: new.url)!, options: nil)
+            let task = self.downloadSession.makeAssetDownloadTask(asset: asset,
+                                                                  assetTitle: new.uuid.uuidString,
+                                                                  assetArtworkData: nil,
+                                                                  options: nil)
+            new.taskIdentifier = task?.taskIdentifier
+            new.state = HLS.State.downloading.rawValue
+            try self.repository.update(hls: new)
+            task?.resume()
+        } catch let error {
+            debugPrint(error)
+        }
     }
 }
 
@@ -209,7 +209,7 @@ extension DownloadHLSManager {
             guard let hls = try repository.find(url: assetDownloadTask.urlAsset.url.absoluteString) else {return nil}
             return hls
         } catch {
-            print("[ERROR]Not found: <\(assetDownloadTask.urlAsset.url.absoluteString)>")
+            debugPrint("[ERROR]Not found: <\(assetDownloadTask.urlAsset.url.absoluteString)>")
             return nil
         }
     }
@@ -223,26 +223,32 @@ extension DownloadHLSManager {
             
             percentComplete += loadedTimeRange.duration.seconds / timeRangeExpectedToLoad.duration.seconds
         }
-        guard let hls = getHLS(from: assetDownloadTask) else {return}
-        DispatchQueue.main.async {
-            self.delegate?.progress(hls: hls, percentage: Float(percentComplete))
-            print("[Progress] \(assetDownloadTask) \(percentComplete)" )
-        }
+        guard var hls = getHLS(from: assetDownloadTask) else {return}
+        hls.percentage = Int(percentComplete * 100)
+        try? repository.update(hls: hls)
+        debugPrint("[Progress] \(assetDownloadTask) \(percentComplete)" )
+        
+        self.delegate?.progress(hls: hls, percentage: Float(percentComplete))
+        
     }
     
     public func urlSession(_ session: URLSession, assetDownloadTask: AVAssetDownloadTask, didFinishDownloadingTo location: URL) {
-        print("[Asset Location]" + location.absoluteString)
+        debugPrint("[Asset Location]" + location.absoluteString)
         do {
-            guard var hls = try repository.find(url: assetDownloadTask.urlAsset.url.absoluteString) else {return}
-            hls.movpkgLocalPath = location.relativePath
-            hls.state = HLS.State.missingKey.rawValue
-            try repository.update(hls: hls)
-            DispatchQueue.main.async {
+            if assetDownloadTask.urlAsset.isPlayable {
+                guard var hls = try repository.find(url: assetDownloadTask.urlAsset.url.absoluteString) else {return}
+                hls.movpkgLocalPath = location.relativePath
+                hls.state = HLS.State.missingKey.rawValue
+                try repository.update(hls: hls)
+                
                 self.delegate?.assetDidDownload(hls: hls)
+                
+            } else {
+                debugPrint("[ERROR]Not found: \(assetDownloadTask.urlAsset)")
             }
             
         } catch {
-            print("[ERROR]Not found: \(assetDownloadTask.urlAsset.url.absoluteString)")
+            debugPrint("[ERROR]Not found: \(assetDownloadTask.urlAsset)")
         }
     }
     
@@ -257,12 +263,12 @@ extension DownloadHLSManager {
             return
         }
         if let downloadTask = (task as? AVAssetDownloadTask) {
-            print("[DOWNLOAD TASK FINISHED]" + (task.taskDescription ?? ""))
+            debugPrint("[DOWNLOAD TASK FINISHED]" + (task.taskDescription ?? ""))
             guard var hls = getHLS(from: downloadTask) else { return}
             do {
                 hls.state = HLS.State.missingKey.rawValue
-                print("[DOWNLOADED ASSET URL]" + downloadTask.urlAsset.url.absoluteString)
-                print("[KEY LOADER]")
+                debugPrint("[DOWNLOADED ASSET URL]" + downloadTask.urlAsset.url.absoluteString)
+                debugPrint("[KEY LOADER]")
                 guard let url = hls.movpkgLocalUrl else {return}
                 guard let bootXML = hls.bootXMLPath else {return}
                 if FileManager.default.fileExists(atPath: bootXML) {
@@ -274,7 +280,7 @@ extension DownloadHLSManager {
                 do {
                     let subDirectories = try FileManager.default.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: .skipsSubdirectoryDescendants)
                     for url in  subDirectories {
-                        print("[Searched]\(url)")
+                        debugPrint("[Searched]\(url)")
                         var isDirectory: ObjCBool = false
                         if FileManager.default.fileExists(atPath: url.path, isDirectory: &isDirectory) {
                             let regex = try NSRegularExpression(pattern:  "URI=\"(.+?)\"")
@@ -300,7 +306,7 @@ extension DownloadHLSManager {
                                 let playlistFilePath = path.appendingPathComponent("\(folderName).m3u8")
                                 if FileManager.default.fileExists(atPath: path.appendingPathComponent("\(folderName).m3u8")) {
                                     
-                                    print("[Searched]\(playlistFilePath)")
+                                    debugPrint("[Searched]\(playlistFilePath)")
                                     var fileContent = try String.init(contentsOf: URL.init(fileURLWithPath: playlistFilePath))
                                     
                                     let nsString = fileContent as NSString
@@ -323,8 +329,8 @@ extension DownloadHLSManager {
                                                     do {
                                                         try data.write(to: keypath)
                                                         try fileContent.write(toFile: playlistFilePath, atomically: true, encoding: .utf8)
-                                                        print("[Key Fetched Sucess]")
-                                                        print("[Update Key Path] \(keyLocalPath)")
+                                                        debugPrint("[Key Fetched Sucess]")
+                                                        debugPrint("[Update Key Path] \(keyLocalPath)")
                                                         hls.keyLocalPath = keyLocalPath
                                                         hls.m3u8LocalPath = m3u8LocalPath
                                                         hls.state = HLS.State.downloaded.rawValue
@@ -336,11 +342,11 @@ extension DownloadHLSManager {
                                                         }
                                                     }
                                                     catch {
-                                                        print("[Key Fetched Fail]")
+                                                        debugPrint("[Key Fetched Fail]")
                                                     }
                                                     //                                                    }
                                                 } else {
-                                                    print("[Key Fetched Fail]")
+                                                    debugPrint("[Key Fetched Fail]")
                                                 }
                                             }).resume()
                                         }
@@ -358,7 +364,7 @@ extension DownloadHLSManager {
                     }
                 }
                 catch {
-                    print("Cannot list directory")
+                    debugPrint("Cannot list directory")
                     
                 }
                 
@@ -367,7 +373,7 @@ extension DownloadHLSManager {
             }
         } else {
             
-            print("[OTHER TASK FINISHED]" + (task.taskDescription ?? ""))
+            debugPrint("[OTHER TASK FINISHED]" + (task.taskDescription ?? ""))
         }
         
     }

@@ -10,6 +10,7 @@ public struct HLS: Model {
     public var keyLocalPath: String?
     public var state: String
     public var taskIdentifier: Int?
+    public var percentage: Int = 0
     
     public enum State: String {
         case pendding
