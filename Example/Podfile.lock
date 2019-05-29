@@ -1,5 +1,5 @@
 PODS:
-  - HLSDownloader (0.3.1)
+  - HLSDownloader (0.4.0)
 
 DEPENDENCIES:
   - HLSDownloader (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HLSDownloader: 360c75c8d4ecff459fec8f392a4a0e7a35941c95
+  HLSDownloader: c834621f7fcb08078a5f013fe9e88a653cbb8600
 
 PODFILE CHECKSUM: b43d6d8e9f5a758838fb08a1762aa1278be6ff5d
 

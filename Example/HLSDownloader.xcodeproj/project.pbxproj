@@ -150,7 +150,6 @@
 				745031CF3B6CDCA7FFA0AC40 /* Pods-HLSDownloader_Tests.debug.xcconfig */,
 				82F2C303122440097D81702A /* Pods-HLSDownloader_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -521,10 +520,6 @@
 			baseConfigurationReference = 745031CF3B6CDCA7FFA0AC40 /* Pods-HLSDownloader_Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = V932DYVRVA;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -543,10 +538,6 @@
 			baseConfigurationReference = 82F2C303122440097D81702A /* Pods-HLSDownloader_Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = V932DYVRVA;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";

@@ -1,6 +1,6 @@
 {
   "name": "HLSDownloader",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "swift_version": "5.0",
   "summary": "Download Crypted HLS with server key and play video as local playing in iOS device.",
   "description": "\"Download Crypted HLS with server key and play video as local playing in iOS device.\"",
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/qi-shun-wang/HLSDownloader.git",
-    "tag": "0.3.1"
+    "tag": "0.4.0"
   },
   "platforms": {
     "ios": "10.0"
