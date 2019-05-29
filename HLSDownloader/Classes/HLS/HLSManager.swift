@@ -273,7 +273,7 @@ extension DownloadHLSManager {
                 guard let bootXML = hls.bootXMLPath else {return}
                 if FileManager.default.fileExists(atPath: bootXML) {
                     var fileContent = try String.init(contentsOf: URL.init(fileURLWithPath: bootXML))
-                    fileContent = fileContent.replacingOccurrences(of: "http", with: "fakehttp")
+                    fileContent = fileContent.replacingOccurrences(of: ">http", with: ">fakehttp")
                     try fileContent.write(toFile: bootXML, atomically: true, encoding: .utf8)
                 }
                 
@@ -325,7 +325,6 @@ extension DownloadHLSManager {
                                             URLSession.shared.dataTask(with: URL(string: remote_key)!, completionHandler: { (data, res, err) in
                                                 if let data = data {
                                                     let keypath = URL(fileURLWithPath: NSHomeDirectory() + "/" + keyLocalPath)
-                                                    //                                                    DispatchQueue.main.async {
                                                     do {
                                                         try data.write(to: keypath)
                                                         try fileContent.write(toFile: playlistFilePath, atomically: true, encoding: .utf8)
@@ -344,7 +343,6 @@ extension DownloadHLSManager {
                                                     catch {
                                                         debugPrint("[Key Fetched Fail]")
                                                     }
-                                                    //                                                    }
                                                 } else {
                                                     debugPrint("[Key Fetched Fail]")
                                                 }
@@ -356,7 +354,9 @@ extension DownloadHLSManager {
                                 let streamInfoBoot = path.appendingPathComponent("StreamInfoBoot.xml")
                                 if FileManager.default.fileExists(atPath: streamInfoBoot) {
                                     var fileContent = try String.init(contentsOf: URL.init(fileURLWithPath: streamInfoBoot))
-                                    fileContent = fileContent.replacingOccurrences(of: "http", with: "fakehttp")
+                                    fileContent = fileContent.replacingOccurrences(of: "NetworkURL>http", with: "NetworkURL>fakehttp")
+                                    fileContent = fileContent.replacingOccurrences(of: "SEG URL=\"http", with: "SEG URL=\"fakehttp")
+                                    
                                     try fileContent.write(toFile: streamInfoBoot, atomically: true, encoding: .utf8)
                                 }
                             }

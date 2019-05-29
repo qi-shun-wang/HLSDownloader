@@ -145,6 +145,7 @@ extension ViewController: UITableViewDataSource {
                             let item = manager.getLocalAsset(hls!)
                             let player = AVPlayer(playerItem: item)
                             cell.playerLayer.player = player
+                            cell.playerLayer.frame = cell.playerView.bounds
                         }
                         cell.playerLayer.player?.play()
                     }
