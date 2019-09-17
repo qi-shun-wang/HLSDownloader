@@ -332,7 +332,7 @@ extension DownloadHLSManager {
                                                 let hlsPort = hlsURL.port,
                                                 let hlsScheme = hlsURL.scheme
                                             {
-                                                remote_key = "\(hlsScheme)://\(hlsHost):\(hlsPort)/\(remote_key)"
+                                                remote_key = "\(hlsScheme)://\(hlsHost):\(hlsPort)\(remote_key)"
                                             }
                                             DispatchQueue.main.async {
                                                 self.delegate?.keyWillDownload(hls: hls)
