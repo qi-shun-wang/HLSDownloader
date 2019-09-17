@@ -315,10 +315,25 @@ extension DownloadHLSManager {
                                     
                                     let m3u8LocalPath = "Library\((path.components(separatedBy: "Library").last ?? ""))/\(folderName).m3u8"
                                     let keyLocalPath = "Library\((path.components(separatedBy: "Library").last ?? ""))/\(keyFilePath)"
-                                    
+                                    if !nsString.contains("URI=") {
+                                        debugPrint("[No Key]")
+                                        hls.keyLocalPath = nil
+                                        hls.m3u8LocalPath = m3u8LocalPath
+                                        hls.state = HLS.State.downloaded.rawValue
+                                        try self.repository.update(hls: hls)
+                                    }
                                     for pattern in stringArray {
                                         DispatchQueue.global(qos: .background).sync {
-                                            let remote_key = pattern.replacingOccurrences(of: "URI=", with: "").trimmingCharacters(in: CharacterSet.init(charactersIn: "\""))
+                                            var remote_key = pattern.replacingOccurrences(of: "URI=", with: "").trimmingCharacters(in: CharacterSet.init(charactersIn: "\""))
+                                            let remoteKeyUrl = URL(string: remote_key)
+                                            if remoteKeyUrl?.host == nil ,
+                                                let hlsURL = URL(string: hls.url),
+                                                let hlsHost = hlsURL.host,
+                                                let hlsPort = hlsURL.port,
+                                                let hlsScheme = hlsURL.scheme
+                                            {
+                                                remote_key = "\(hlsScheme)://\(hlsHost):\(hlsPort)/\(remote_key)"
+                                            }
                                             DispatchQueue.main.async {
                                                 self.delegate?.keyWillDownload(hls: hls)
                                             }
